@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>new a jQuery</title>
+</head>
+<style media="screen">
+  div{
+    display: inline-block;
+    width:200px;
+    height:200px;
+    border:1px solid #ddd;
+    vertical-align: middle;
+  }
+  .red{
+    background-color: red;
+  }
+  .blue{
+    background-color: blue;
+  }
+  .yellow{
+    background-color: yellow;
+  }
+</style>
+<body>
+  <div class="red redTest" id='red'>
+    <span>dd</span>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>
+          <span class="dd"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="blue" id='blue'>
+    <span class="blueSpan"></span>
+  </div>
+  <div class='' name='spanParent'>
+    <span class="dd" style="display:block;width:100px;height:100px"></span>
+  </div>
+  <span></span>
+</body>
+  <script src='./js/myJQ.js'></script>
+
+  <script type="text/javascript">
+  var a = function (str) {
+    console.log(str)
+  }
+  // a($("div").eq(-1))
+  // $("div").last().children().addClass('yellow')
+  a($('.red').children().last().children().first().addClass('yellow'))
+  </script>
+</html>
